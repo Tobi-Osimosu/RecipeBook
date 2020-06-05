@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="mat-elevation-z8" style="height: 50px;">
+
+  <button href="#" mat-button disableRipple>
+    <mat-icon>restaurant_menu</mat-icon>RecipeBook
+  </button>
+
+  <span class="spacer"></span>
+
+  <button href="#" mat-button (click)="home()">
+    <mat-icon>home</mat-icon> Home
+  </button>
+  <button href="#" mat-button>
+    <mat-icon>timeline</mat-icon> About
+  </button>
+
+  <span class="spacer"></span>
+
+  <mat-icon [matMenuTriggerFor]="navMenu" style="cursor: pointer;">menu</mat-icon>
+  <mat-menu #navMenu="matMenu">
+    <button mat-menu-item (click)="goToDashboard()">Dashboard</button>
+    <button mat-menu-item (click)="navigate()">Authenticate</button>
+  </mat-menu>
+
+</mat-toolbar>

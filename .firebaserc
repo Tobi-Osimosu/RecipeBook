@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "recipebook-de1a8": {
+      "hosting": {
+        "recipe-book": [
+          "recipebook-de1a8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "recipebook-de1a8"
+  }
+}

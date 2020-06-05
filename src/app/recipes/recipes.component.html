@@ -1,0 +1,48 @@
+<br>
+<h3 style="text-align: center; color: white;">
+    <em>Welcome to RecipeBook!
+        <br>
+        Here is a list of all the recipes created by our beloved users
+    </em>
+</h3>
+<hr>
+
+<mat-form-field appearance="outline">
+    <mat-label>Search</mat-label>
+    <input style="color: white;" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search for Recipe">
+</mat-form-field>
+<br>
+<!-- <mat-grid-list cols="4" rowHeight="325px"> -->
+    <!-- <mat-grid-tile *ngFor="let recipe of recipes"> -->
+        <div class="row">
+            <div class="col-md-3 col-12 mb JCC" *ngFor="let recipe of recipes">
+                <mat-card @listAnimation class="mat-elevation-z4" style="width: 250px;">
+                    <p style="justify-content: center;"><em><strong>{{ recipe.title }} <mat-card-subtitle>by user
+                                </mat-card-subtitle></strong></em></p>
+                    <img mat-card-image src="{{recipe.image}}" alt="" style="height: 150px;">
+                    <mat-card-actions>
+                        <button mat-raised-button color="primary" (click)="onViewRecipe(recipe)">
+                            <mat-icon>amp_stories</mat-icon>View
+                        </button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    <!-- </mat-grid-tile> -->
+<!-- </mat-grid-list> -->
+
+<!-- <div *ngFor="let recipe of recipes">
+    {{ recipe.title }}
+    {{ recipe.description }}
+</div> -->
+
+<!-- <mat-card class="mat-elevation-z9" style="margin-top: 30px; width: 500px;">
+    <h2>List of all Recipes in Firestore</h2>
+    <mat-list *ngFor="let recipe of recipes">
+        <mat-list-item>
+            <h4 matSubheader matLine>{{ recipe.title }}</h4>
+            <p matLine>{{ recipe.description }}</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+</mat-card>  -->

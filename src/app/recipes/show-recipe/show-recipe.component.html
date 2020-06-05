@@ -1,0 +1,11 @@
+<button mat-raised-button color="warn" mat-dialog-close>
+    <mat-icon>arrow_back_ios</mat-icon>Back
+</button>
+<h3 style="text-decoration: underline;">How to Make {{ data.title }}</h3>
+<img src="{{ data.image }}" alt="" style="width: 300px; height: 200px;">
+<p>{{ data.description }}</p>
+<mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="primary" (click)="onEditRecipe()">
+        <mat-icon>create</mat-icon>Edit
+    </button>
+</mat-dialog-actions>
